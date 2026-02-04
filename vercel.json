@@ -1,0 +1,6 @@
+{
+  "name": "prompt-dev",
+  "framework": "static",
+  "buildCommand": null,
+  "outputDirectory": "."
+}

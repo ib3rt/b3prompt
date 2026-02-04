@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Prompt.dev - Master AI Prompting</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: #0a0a0f; 
+            color: #fff; 
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .hero { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 40px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 72px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 24px; opacity: 0.95; max-width: 700px; margin: 0 auto 40px; }
+        .hero .tag { 
+            display: inline-block; padding: 8px 20px; 
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px; font-size: 14px; margin-bottom: 20px;
+        }
+        .content { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+        .content h2 { font-size: 42px; margin-bottom: 20px; text-align: center; }
+        .modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .module { 
+            background: #1a1a25; padding: 30px; border-radius: 16px; 
+            border: 1px solid #333; transition: all 0.3s;
+        }
+        .module:hover { border-color: #667eea; transform: translateY(-4px); }
+        .module .number { 
+            display: inline-block; width: 40px; height: 40px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px; text-align: center; line-height: 40px; 
+            font-weight: 700; margin-bottom: 15px;
+        }
+        .module h3 { font-size: 20px; margin-bottom: 10px; }
+        .module p { color: #888; font-size: 14px; margin-bottom: 15px; }
+        .module .cta { 
+            color: #667eea; text-decoration: none; font-weight: 600; font-size: 14px;
+        }
+        .cta-button { 
+            display: inline-block; padding: 16px 40px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600;
+            margin: 20px auto; display: block; width: fit-content;
+        }
+        .tips { 
+            background: #12121a; padding: 60px 40px; margin-top: 60px;
+        }
+        .tips h2 { font-size: 36px; margin-bottom: 30px; }
+        .tip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+        .tip { 
+            background: #1a1a25; padding: 25px; border-radius: 12px; 
+            border-left: 4px solid #667eea;
+        }
+        .tip h4 { margin-bottom: 8px; color: #667eea; }
+        .tip p { color: #999; font-size: 14px; }
+        .templates { padding: 60px 40px; max-width: 900px; margin: 0 auto; }
+        .template { 
+            background: #1a1a25; padding: 25px; border-radius: 12px; 
+            margin-bottom: 20px; font-family: 'Monaco', 'Menlo', monospace;
+        }
+        .template .label { 
+            color: #667eea; font-size: 12px; text-transform: uppercase; 
+            letter-spacing: 1px; margin-bottom: 10px; display: block;
+        }
+        footer { padding: 40px; text-align: center; color: #666; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <span class="tag">🚀 AI Prompt Improvement Course</span>
+        <h1>Prompt.dev</h1>
+        <p>Master the art of prompting. Write better prompts, get better results.</p>
+        <a href="#modules" class="cta-button">Start Learning</a>
+    </section>
+    
+    <section id="modules" class="content">
+        <h2>Course Modules</h2>
+        <div class="modules">
+            <div class="module">
+                <span class="number">1</span>
+                <h3>Prompt Basics</h3>
+                <p>What prompts are and why wording matters.</p>
+                <a href="/course/module-1-basics.md" class="cta">Start →</a>
+            </div>
+            <div class="module">
+                <span class="number">2</span>
+                <h3>Structure & Format</h3>
+                <p>Clear instructions, context, and constraints.</p>
+                <a href="/course/module-2-structure.md" class="cta">Start →</a>
+            </div>
+            <div class="module">
+                <span class="number">3</span>
+                <h3>Specificity</h3>
+                <p>Few-shot prompting and persona techniques.</p>
+                <a href="/course/module-3-specificity.md" class="cta">Start →</a>
+            </div>
+            <div class="module">
+                <span class="number">4</span>
+                <h3>Refinement</h3>
+                <p>Iterate and improve your prompts.</p>
+                <a href="/course/module-4-refinement.md" class="cta">Start →</a>
+            </div>
+            <div class="module">
+                <span class="number">5</span>
+                <h3>Advanced Tactics</h3>
+                <p>Chain-of-thought and system prompts.</p>
+                <a href="/course/module-5-advanced.md" class="cta">Start →</a>
+            </div>
+            <div class="module">
+                <span class="number">6</span>
+                <h3>Applications</h3>
+                <p>Real-world use cases and projects.</p>
+                <a href="/course/module-6-applications.md" class="cta">Start →</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tips">
+        <h2>💡 Quick Tips</h2>
+        <div class="tip-grid">
+            <div class="tip">
+                <h4>Be Specific</h4>
+                <p>Instead of "write code," say "write a Python function that..."</p>
+            </div>
+            <div class="tip">
+                <h4>Give Context</h4>
+                <p>Tell the AI who you are and what you're trying to accomplish.</p>
+            </div>
+            <div class="tip">
+                <h4>Use Examples</h4>
+                <p>Few-shot prompting with examples dramatically improves results.</p>
+            </div>
+            <div class="tip">
+                <h4>Iterate</h4>
+                <p>First output rarely perfect. Refine based on results.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="templates">
+        <h2>📝 Prompt Templates</h2>
+        <div class="template">
+            <span class="label">Basic Template</span>
+            <p>Role: [expertise]<br>Task: [what you want]<br>Context: [background]<br>Format: [how to respond]</p>
+        </div>
+        <div class="template">
+            <span class="label">Writing Assistant</span>
+            <p>"Act as an expert editor. Review this [content type] written for [audience]. Focus on [aspects]. Format: [output format]."</p>
+        </div>
+        <div class="template">
+            <span class="label">Code Reviewer</span>
+            <p>"Review this [language] code for [issues]. Provide suggestions with explanations. Suggest improvements for [areas]."</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>🚀 Prompt.dev • Master AI Prompting</p>
+        <p>Part of Life OS</p>
+    </footer>
+</body>
+</html>
