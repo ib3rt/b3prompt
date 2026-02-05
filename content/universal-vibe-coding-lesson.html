@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 The Ultimate Vibe Coding Lesson - b3prompt.com</title>
+    <meta name="description" content="Master AI-assisted website development with the universal vibe coding template. Create stunning multi-page sites with AI.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --sunset-gold: #FFD700;
+            --sunset-orange: #FF6B35;
+            --sunset-pink: #FF69B4;
+            --sunset-purple: #8B5CF6;
+            --bg-dark: #0a0a0f;
+            --bg-card: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #666680;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        
+        /* Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 40px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span {
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--sunset-orange);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 160px 40px 100px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        }
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--sunset-orange);
+            border-radius: 50%;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange), var(--sunset-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sunset-orange), var(--sunset-pink));
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
+        }
+        .btn-secondary {
+            background: var(--bg-card);
+            color: white;
+            border: 1px solid var(--text-muted);
+        }
+        .btn-secondary:hover {
+            border-color: var(--sunset-orange);
+        }
+        
+        /* Content */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .section h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: var(--sunset-orange);
+        }
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+        .section ul, .section ol {
+            color: var(--text-secondary);
+            margin: 20px 0 20px 30px;
+        }
+        .section li {
+            margin-bottom: 12px;
+        }
+        .highlight {
+            background: var(--bg-card);
+            border-left: 4px solid var(--sunset-orange);
+            padding: 20px 25px;
+            border-radius: 0 12px 12px 0;
+            margin: 30px 0;
+        }
+        .highlight p {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+        code {
+            background: var(--bg-card);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--sunset-orange);
+        }
+        pre {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .template-box {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .template-box h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--sunset-gold);
+        }
+        .info-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 107, 53, 0.1));
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .info-box h4 {
+            color: var(--sunset-purple);
+            margin-bottom: 15px;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        th {
+            color: var(--sunset-orange);
+            font-weight: 600;
+        }
+        td {
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+        footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        footer a {
+            color: var(--sunset-orange);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .site-header { padding: 15px 20px; }
+            .nav-links { display: none; }
+            .hero { padding: 120px 20px 60px; }
+            .content { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <a href="/" class="logo">b3<span>prompt</span>.com</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/#course">Course</a></li>
+                    <li><a href="/#templates">Templates</a></li>
+                    <li><a href="/#tips">Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="dot"></span>
+                ✨ New Lesson
+            </div>
+            <h1>The Ultimate <span>Vibe Coding</span> Lesson</h1>
+            <p>Master the art of AI-assisted website development. Learn to create stunning multi-page sites using the universal vibe coding template.</p>
+            <div class="cta-group">
+                <a href="#content" class="btn btn-primary">📖 Start Learning</a>
+                <a href="/" class="btn btn-secondary">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content -->
+    <main class="content" id="content">
+        <div class="section">
+            <h2>📚 Lesson Overview</h2>
+            <p><strong>Duration:</strong> 30-45 minutes | <strong>Level:</strong> Intermediate | <strong>Prerequisites:</strong> Basic HTML/CSS knowledge</p>
+            <p>Learn the universal vibe coding prompt template and create world-class multi-page websites with AI assistance. This comprehensive lesson takes you from concept to deployment.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🎨 What is Vibe Coding?</h2>
+            <p>Vibe coding is an AI-assisted development approach where you describe your creative vision in natural language, and AI tools help you build it. It's not about replacing developers—it's about amplifying human creativity with AI capabilities.</p>
+            <div class="highlight">
+                <p>💡 <strong>Key Principle:</strong> You're the creative director. AI is your implementation partner.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ The Universal Vibe Coding Prompt Template</h2>
+            <p>Copy and customize this template for any project:</p>
+            
+            <div class="template-box">
+                <h4>🎯 Universal Vibe Coding Prompt</h4>
+                <pre>Ultrathink this: Design a multi-page [SITE_TYPE] with a [VIBE] vibe 
+([VIBE_DETAILS]). Break into subtasks:
+
+1. Define full site architecture:
+   - Pages and their purposes
+   - User flows and navigation
+   - Linking logic with exact hrefs
+
+2. Specify tech stack:
+   - HTML5 semantic markup
+   - CSS custom properties
+   - Vanilla JavaScript (no frameworks)
+
+3. Add responsiveness:
+   - Mobile-first approach
+   - Breakpoints at standard sizes
+   - Hamburger menu for mobile
+
+Output as a detailed spec document.
+
+Vibe: [VIBE]-inspired, with [VIBE_ELEMENTS].
+
+Ensure:
+- All pages ([PAGE_LIST]) are fully built with semantic HTML
+- Linking: Use &lt;a href="[EXAMPLE_LINK]"&gt; for navigation
+- World-class polish: Accessibility, performance, dark/light mode
+
+Provide:
+1. Code for each HTML file
+2. Complete CSS stylesheet
+3. JavaScript for interactivity
+4. Deployment guide</pre>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📝 How to Customize the Template</h2>
+            <table>
+                <tr>
+                    <th>Placeholder</th>
+                    <th>What to Replace</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>[SITE_TYPE]</code></td>
+                    <td>What kind of site?</td>
+                    <td>"art portfolio"</td>
+                </tr>
+                <tr>
+                    <td><code>[VIBE]</code></td>
+                    <td>The aesthetic style</td>
+                    <td>"sunset-inspired"</td>
+                </tr>
+                <tr>
+                    <td><code>[VIBE_DETAILS]</code></td>
+                    <td>Specific vibe description</td>
+                    <td>"warm gradients, golden hour colors"</td>
+                </tr>
+                <tr>
+                    <td><code>[PAGE_LIST]</code></td>
+                    <td>All pages needed</td>
+                    <td>"Home, Work, About, Blog, Contact"</td>
+                </tr>
+                <tr>
+                    <td><code>[EXAMPLE_LINK]</code></td>
+                    <td>Navigation example</td>
+                    <td>"projects.html"</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🌅 Case Study: The Sunset Portfolio</h2>
+            <p>We used this template to build a stunning sunset-themed art portfolio. Here's what we created:</p>
+            
+            <div class="template-box">
+                <h4>📁 Project Structure</h4>
+                <pre>sunset-portfolio/
+├── index.html          # Homepage with hero, featured work, testimonials
+├── projects.html       # Gallery with category filtering
+├── about.html          # Artist story, values, stats, services
+├── blog.html           # Blog listing with sample posts
+├── contact.html        # Contact form with validation
+├── css/
+│   └── styles.css      # Complete design system (21KB)
+├── js/
+│   └── main.js         # All interactivity (12KB)
+└── images/             # Portfolio images</pre>
+            </div>
+            
+            <p><strong>Repository:</strong> <a href="https://github.com/ib3rt/sunset-portfolio" target="_blank" style="color: var(--sunset-orange);">https://github.com/ib3rt/sunset-portfolio</a></p>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Vibe Coding Best Practices</h2>
+            <ol>
+                <li><strong>Start with a Clear Vision</strong> — Define your site type, vibe, pages, and audience before prompting.</li>
+                <li><strong>Break It Down</strong> — Use chained prompting: architecture → CSS → HTML → JS → review.</li>
+                <li><strong>Iterate and Refine</strong> — The AI isn't perfect. Ask for improvements.</li>
+                <li><strong>Focus on World-Class Polish</strong> — Always include accessibility, performance, and SEO.</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Making Your Vibe More Engaging</h2>
+            <p>Design elements that boost engagement:</p>
+            
+            <div class="info-box">
+                <h4>✨ Engagement Boosters</h4>
+                <ul>
+                    <li><strong>Gradients:</strong> CSS `linear-gradient` with animation</li>
+                    <li><strong>Micro-interactions:</strong> `:hover` states with transitions</li>
+                    <li><strong>Parallax:</strong> Scroll-linked animations</li>
+                    <li><strong>Dark mode:</strong> CSS variables + JS toggle</li>
+                    <li><strong>Reveal animations:</strong> Intersection Observer API</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📱 Mobile Testing Checklist</h2>
+            <ul>
+                <li>✅ Touch targets ≥48px</li>
+                <li>✅ No horizontal scroll</li>
+                <li>✅ Hamburger menu works</li>
+                <li>✅ Images lazy load properly</li>
+                <li>✅ Typography scales with viewport</li>
+                <li>✅ Dark mode toggle accessible</li>
+                <li>✅ Forms work on mobile</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 SEO Optimization Guide</h2>
+            <p>Include these in every prompt:</p>
+            <ul>
+                <li>Unique title tag per page</li>
+                <li>Meta description per page</li>
+                <li>Open Graph tags for social sharing</li>
+                <li>Canonical URLs</li>
+                <li>Semantic HTML5 structure</li>
+                <li>Alt text on all images</li>
+                <li>Structured data (JSON-LD)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🎓 Lesson Exercises</h2>
+            <ol>
+                <li><strong>Customize the Template</strong> — Fill out the universal prompt for your project.</li>
+                <li><strong>Generate a Spec</strong> — Create site architecture from your prompt.</li>
+                <li><strong>Build One Page</strong> — Implement just the homepage.</li>
+                <li><strong>Add Polish</strong> — Enhance with animations, dark mode, accessibility.</li>
+                <li><strong>Deploy</strong> — Push to GitHub and enable auto-deployment.</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>🎉 Your Challenge</h2>
+            <p>Create your own vibe-coded site using this template! Start with this prompt:</p>
+            <div class="highlight">
+                <p style="font-size: 16px;">"Design a multi-page [YOUR_PROJECT] with a [YOUR_VIBE] vibe ([VIBE_DETAILS]). Include [PAGES] and [FEATURES]..."</p>
+            </div>
+            <p style="margin-top: 30px; text-align: center;">
+                <a href="/" class="btn btn-primary">← Back to b3prompt.com</a>
+            </p>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>🚀 The Ultimate Vibe Coding Lesson — Part of <a href="/">b3prompt.com</a></p>
+        <p style="margin-top: 10px;">Part of <a href="https://b3rt.dev" target="_blank">b3rt.dev</a></p>
+    </footer>
+</body>
+</html>

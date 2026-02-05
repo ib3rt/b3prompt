@@ -1,0 +1,12 @@
+name = "b3prompt-pages"
+pages_build_output_dir = "."
+compatibility_date = "2026-02-05"
+
+[build]
+command = ""
+
+[site]
+bucket = "."
+
+[vars]
+SITE_TITLE = "b3prompt.com - Master AI Prompting"
